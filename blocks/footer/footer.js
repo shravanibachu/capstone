@@ -11,10 +11,19 @@ export default async function decorate(block) {
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
   const fragment = await loadFragment(footerPath);
 
-  // decorate footer DOM
-  block.textContent = '';
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-  block.append(footer);
+  block.textContent='';
+  const footerDivContainer=document.createElement('div');
+  const footerDivSpace=document.createElement('div');
+  footerDivSpace.classList.add('blank-space');
+  const footerClasses=['footer-nav','footer-text'];
+  let index=0;
+  while(fragment.firstElementChild){
+    fragment.firstElementChild.classList.add(footerClasses[index]);
+    footerDivContainer.append(fragment.firstElementChild)
+    if(index==0){
+      footerDivContainer.append(footerDivSpace);
+    }
+    index+=1;
+  }
+  block.append(footerDivContainer);
 }
