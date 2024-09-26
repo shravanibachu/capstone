@@ -45,7 +45,7 @@
                     line-height: 1.5;
                     text-wrap: wrap;
                     cursor:pointer;
-                    width: 23ch;
+                    width: 27ch;
                     display:inline-block
                 }
             }
@@ -70,6 +70,7 @@
 
 } 
 .article-cards-container .default-content-wrapper {
+
     > .button-container {
          padding:0 14px;
      }

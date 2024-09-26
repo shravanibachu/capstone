@@ -1,0 +1,188 @@
+@keyframes fadeIn { 
+    0% {  
+        opacity: 0; 
+        opacity: 0; 
+    }  
+    100% {  
+        opacity: 1; 
+        opacity: 1; 
+    }  
+}
+
+.section.carousel-container {
+    z-index: -1;
+    margin-bottom: 50px;
+    > .carousel-wrapper {
+        max-width:2000px !important;
+
+        > .carousel.block {
+            > div{
+                display:none; 
+                animation-duration: 0.5s; 
+                animation-fill-mode: both; 
+                animation-name: fadeIn; 
+                > div:first-child {
+                    height:15pc;
+                    @media (width>=768px){
+                        height:20pc;
+                    }
+                    @media (width>=1165px){
+                        height:40pc;
+                        max-height:40pc;
+                    }
+
+                    width:100%;
+                    > picture {
+
+                        > img {
+                            height: 100%;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                        }
+                    }
+
+                }
+
+                >div:last-child {
+                    background-color: #fff;
+                    display:flex;
+                    flex-direction: column;
+                    flex:1;
+                    padding: 0 14px;
+                    height:20pc;
+                    overflow: hidden;
+                    @media (width>=768px){
+                        height:15pc;
+                    }
+                    @media (width>=1165px){
+                        height: 180px;
+                        margin-top: -160px;
+                        min-height: 180px;
+                        max-width: 1200px;
+                        padding-bottom: 0;
+                        padding-left: 28px;
+                        padding-right: 28px;
+                        position: relative;
+                        margin-left:auto;
+                        margin-right:auto;
+                        width: 71pc;
+                    }
+
+                    > h2 {
+                        margin-bottom: 0;
+                        margin-top:18px;
+                        font-size: 36px;
+                        font-weight: 300;
+                    }
+
+                    > p {
+                        color: #202020;
+                        font-family: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        margin:0;
+                        font-size: 18px;
+                        line-height: 1.75;
+
+                    }
+
+                }
+
+            }
+
+            > .carousel-active , > .button-container {
+                display:block;
+            }
+            > .button-action-container {
+                display: flex;
+                gap: 1px;
+                float: right;
+                position: relative;
+                margin-top: -40px;
+                span:last-child{
+                display: none !important;}
+               
+               
+               
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0px;
+                    display: flex;
+                    align-items: center;
+                    color: black;
+                  }
+                 
+                  button .action-icon {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                  }
+                 
+                  .action--previous .action-icon {
+                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>');
+                  }
+                 
+                  .action--next .action-icon {
+                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>');
+                  }
+                 
+                  button:hover .action-icon {
+                    stroke: gray;
+                  }
+                 
+                 
+              }
+
+            >ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;  
+                cursor: pointer;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: left;
+                @media (width>=768px){
+                    justify-content: center;
+                }
+                list-style: none;
+                margin: 0.5em 0 0;
+                padding: 0;
+         
+                >li{
+                    flex: 0 1 auto;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 7px;
+                    border-radius: 50%;
+                    font-size: 0;
+                    text-indent: -3000px;
+                    background-color: rgba(0,0,0,0.5);
+                }
+                .list-active{
+                    background-color: rgba(0,0,0,0.8);
+                }
+            
+            }
+        }
+
+        .carousel.single-slide > div > div:last-child{
+           @media (width>=0px){
+            height:23pc;
+           }
+           @media (width>=560px){
+            height:15pc;
+           }
+
+        }
+    }
+}
