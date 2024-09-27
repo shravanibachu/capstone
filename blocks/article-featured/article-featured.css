@@ -1,5 +1,6 @@
 .section.article-featured-container > .article-featured-wrapper > .article-featured.block {
-    font-family: "Source Sans pro", "Helvetica Neue", Helvetica, Arial, sans-serif;   
+    font-family: "Source Sans pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    margin:20px;  
 
     > div {
         display: flex;
@@ -20,7 +21,7 @@
         > div:last-child {
             flex:0 0 35%;
             word-wrap: break-word;
-            padding:63px 36px 36px;
+            padding:63px 36px 20px;
             box-sizing: border-box;
 
             > h3 {

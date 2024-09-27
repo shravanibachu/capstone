@@ -1,8 +1,9 @@
 header {
   z-index: 20;
-  position: fixed;
+  position: sticky;
+  top:0;
   width: 100%;
-
+    
   .nav-wrapper {
     background-color: var(--background-color);
     width: 100%;
@@ -211,7 +212,7 @@ header {
       line-height: 1;
       float: left;
       width: 16.6666666667%;
-      padding: 0 14px;
+      /* padding: 0 14px; */
 
       img {
         width: 128px;
@@ -440,7 +441,7 @@ header {
 
 @media (width >= 600px) {
   header nav {
-    padding: 75px 14px 50px 14px;
+    padding: 75px 14px 50px 0px;
   }
 }
 
