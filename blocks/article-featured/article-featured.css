@@ -64,7 +64,8 @@
     font-family: "Asar", Georgia, "Times New Roman", Times, serif;
     font-weight: var(--fontWeightNormal, normal) !important;
     margin-bottom: 13.5px !important;
-    margin-top: 27px !important;
+    margin-top: 13.5px !important;
     font-size: 40px !important;
+    margin-left: 20px !important;
     
 }

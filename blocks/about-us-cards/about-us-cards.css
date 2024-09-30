@@ -1,0 +1,95 @@
+.section.about-us-cards-container {
+    > .default-content-wrapper {
+        padding: 0 14px;
+
+        > h1 {
+            font-weight: normal;
+            margin: 13.5px 15px 13.5px;
+            font-size: 40px;
+        }
+
+        > h2 {
+            margin: 20px 15px 13.5px;
+        }
+
+        > p {
+            font-style: italic;
+            font-size: 14px;
+            text-align: justify;
+            line-height: 2.5;
+        }
+
+    }
+
+    > .about-us-cards-wrapper> .about-us-cards.block {
+        >div {
+            @media(width>768px){
+                width:45%;
+                display:inline-block;
+            }
+            @media(width>1024px){
+                width:22%;
+            }
+            padding: 9px 14px 18px;
+            > div:first-child {
+                > picture {
+                    display: flex;
+                    align-items: center; 
+                    justify-content: center;
+
+                    > img {
+                        margin: 7px 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                        border-radius: 50%; 
+                        width: 164px; 
+                        height: 164px;
+                        border-radius: 50%; 
+                        overflow: hidden;
+                        
+                    }
+        
+                }
+                
+            }
+
+            > div:last-child {
+                text-align: center;
+                > p{
+                    text-align: center;
+                }
+                > p:first-child {
+                    font-size: 24px;
+                    font-family: var(--fontFamilySerif, "Asar", Georgia, "Times New Roman", Times, serif);
+                    margin: 0 0 6px;
+                }
+
+                >p:nth-child(2) {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    margin: 0 0 3.5px;
+                    font-weight:600;
+                }
+                > .button-container{
+                    > a{
+                        all:unset;
+                        color:red;
+                    }
+                    display: inline-block;
+                    height:3pc;
+                    width: 3pc;
+                    background-color: black;
+                    margin-right: -10px;
+                    .icon img {
+                        cursor: pointer;
+                        padding-top:10px;
+                    }
+                }
+            }
+        }
+    }
+}
