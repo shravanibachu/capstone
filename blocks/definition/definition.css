@@ -1,0 +1,54 @@
+.section.definition-container {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    color: #202020;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+
+    .definition-wrapper {
+        padding: 18px 32px;
+        background-color: #ebebeb;
+
+        div {
+            > div {
+                div:nth-child(1) {
+                    > p {
+                        margin: 0;
+                    }
+                    padding: 14px;
+                    font-size: 36px;
+                    margin: 0 0 13.5px;
+                }
+
+                div:nth-child(1):after {
+                    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+                    content: "";
+                    display: block;
+                    position: relative;
+                    top: .25em;
+                    width: 5pc;
+                }
+            }
+
+            div:nth-child(2) {
+                font-size: 18px;
+                line-height: 2.5;
+                margin: 0 0 13.5px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .not-a-quote {
+        font-weight:600;
+        font-family: 'Asar';
+
+        @media (width>1024px){
+            p{
+                width:22ch;
+            }
+        }
+    }
+}
